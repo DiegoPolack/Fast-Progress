@@ -1,0 +1,14 @@
+{
+  "projectPath": ":fabric",
+  "classpaths": {
+    "test": [
+      "C:\\Users\\diegu\\Desktop\\fastprogress-1.21.1\\fabric\\build\\classes\\java\\test",
+      "C:\\Users\\diegu\\Desktop\\fastprogress-1.21.1\\fabric\\build\\resources\\test"
+    ],
+    "main": [
+      "C:\\Users\\diegu\\Desktop\\fastprogress-1.21.1\\fabric\\build\\classes\\java\\main",
+      "C:\\Users\\diegu\\Desktop\\fastprogress-1.21.1\\fabric\\build\\resources\\main",
+      "C:\\Users\\diegu\\Desktop\\fastprogress-1.21.1\\fabric\\build\\devlibs\\fastprogress-1.0.0-dev.jar"
+    ]
+  }
+}
