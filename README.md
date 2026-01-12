@@ -1,6 +1,3 @@
-from pathlib import Path
-
-readme_updated = """# Fast Progress
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20downloads)](https://modrinth.com/mod/fast-progress)
 [![Modrinth Version](https://img.shields.io/modrinth/v/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20version)](https://modrinth.com/mod/fast-progress)
