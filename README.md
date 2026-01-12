@@ -1,4 +1,6 @@
-# Fast Progress
+from pathlib import Path
+
+readme_updated = """# Fast Progress
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20downloads)](https://modrinth.com/mod/fast-progress)
 [![Modrinth Version](https://img.shields.io/modrinth/v/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20version)](https://modrinth.com/mod/fast-progress)
@@ -69,17 +71,20 @@ When a player breaks a block, Fast Progress:
 Place the following in your `mods/` folder:
 - `Fast Progress (Fabric).jar`
 - **Fabric API**
+- **Architectury API**
 - **Cloth Config (Fabric)**
 - *(Optional but recommended)* **Mod Menu** (enables the config button in the Mods list)
 
 ### Forge (1.20.1)
 Place the following in your `mods/` folder:
 - `Fast Progress (Forge).jar`
+- **Architectury API**
 - **Cloth Config (Forge)**
 
 ### NeoForge (1.21.1)
 Place the following in your `mods/` folder:
 - `Fast Progress (NeoForge).jar`
+- **Architectury API**
 - **Cloth Config (NeoForge)**
 
 > Make sure you’re using the correct jar for your loader (Fabric vs Forge vs NeoForge).
