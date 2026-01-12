@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "com/fastprogress/mixin/BlockSetPlacedByMixin": {
+      "setPlacedBy": "Lnet/minecraft/class_2248;method_9567(Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_2680;Lnet/minecraft/class_1309;Lnet/minecraft/class_1799;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/fastprogress/mixin/BlockSetPlacedByMixin": {
+        "setPlacedBy": "Lnet/minecraft/class_2248;method_9567(Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_2680;Lnet/minecraft/class_1309;Lnet/minecraft/class_1799;)V"
+      }
+    }
+  }
+}
