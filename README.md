@@ -2,13 +2,12 @@
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20downloads)](https://modrinth.com/mod/fast-progress)
 [![Modrinth Version](https://img.shields.io/modrinth/v/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20version)](https://modrinth.com/mod/fast-progress)
+[![CurseForge](https://img.shields.io/badge/CurseForge-fast--progress-F16436?logo=curseforge&logoColor=white)](https://legacy.curseforge.com/minecraft/mc-mods/fast-progress)
 [![NeoForge](https://img.shields.io/badge/Loader-NeoForge-5BC2E7)](#)
+[![Fabric](https://img.shields.io/badge/Loader-Fabric-DBD0B4)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A lightweight progression/QoL mod that **multiplies block drops** when players break blocks — fully configurable (multiplier, structure blocks, placed blocks, Fortune/Silk Touch, and per-block filters).
-
-> **Minecraft:** 1.20.1 (Fabric & Forge)  
-> *(More versions/loaders may be added later.)*
 
 ---
 
@@ -16,6 +15,19 @@ A lightweight progression/QoL mod that **multiplies block drops** when players b
 
 - **Modrinth:** https://modrinth.com/mod/fast-progress  
 - **CurseForge:** https://legacy.curseforge.com/minecraft/mc-mods/fast-progress  
+
+---
+
+## Supported Versions / Loaders
+
+- **Minecraft 1.20.1**
+  - Fabric
+  - Forge
+- **Minecraft 1.21.1**
+  - Fabric
+  - NeoForge
+
+> Make sure you download the correct jar for your Minecraft version and loader.
 
 ---
 
@@ -53,7 +65,7 @@ When a player breaks a block, Fast Progress:
 
 ## Installation
 
-### Fabric (1.20.1)
+### Fabric (1.20.1 / 1.21.1)
 Place the following in your `mods/` folder:
 - `Fast Progress (Fabric).jar`
 - **Fabric API**
@@ -65,7 +77,12 @@ Place the following in your `mods/` folder:
 - `Fast Progress (Forge).jar`
 - **Cloth Config (Forge)**
 
-> Make sure you’re using the correct jar for your loader (Fabric vs Forge).
+### NeoForge (1.21.1)
+Place the following in your `mods/` folder:
+- `Fast Progress (NeoForge).jar`
+- **Cloth Config (NeoForge)**
+
+> Make sure you’re using the correct jar for your loader (Fabric vs Forge vs NeoForge).
 
 ---
 
@@ -101,49 +118,3 @@ Blocks:
 # One block id per line
 # minecraft:diamond_ore
 # minecraft:ancient_debris
-```
-
-### Filter Rules
-- **Blacklist (0):** blocks listed are **NOT affected**.
-- **Whitelist (1):** **ONLY** blocks listed are affected. If the list is empty, nothing is affected.
-
-### In-Game Config
-You can edit these settings from the Mods menu:
-- Fabric: via Mod Menu
-- Forge: via the built-in Mods screen config button
-
----
-
-## Building from Source
-
-### Requirements
-- **Java 17**
-- Gradle (wrapper included)
-
-### Build
-```bash
-./gradlew build
-```
-
-Artifacts will be generated in:
-- `fabric/build/libs/`
-- `forge/build/libs/`
-
-### Clean Build
-```bash
-./gradlew clean build
-```
-
----
-
-## Project Structure (Architectury)
-
-- `common/` — shared logic (drops, filters, tracking, structure checks)
-- `fabric/` — Fabric platform hooks (events, Mod Menu integration)
-- `forge/` — Forge platform hooks (events, config screen registration)
-
----
-
-## License
-
-This project is licensed under the **MIT License**. See [`LICENSE`](LICENSE).
