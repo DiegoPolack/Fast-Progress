@@ -1,7 +1,7 @@
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20downloads)](https://modrinth.com/mod/fast-progress)
 [![Modrinth Version](https://img.shields.io/modrinth/v/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20version)](https://modrinth.com/mod/fast-progress)
-[![CurseForge](https://img.shields.io/badge/CurseForge-fast--progress-F16436?logo=curseforge&logoColor=white)](https://legacy.curseforge.com/minecraft/mc-mods/fast-progress)
+[![CurseForge](https://img.shields.io/badge/CurseForge-fast--progress-F16436?logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/fast-progress)
 [![NeoForge](https://img.shields.io/badge/Loader-NeoForge-5BC2E7)](#)
 [![Fabric](https://img.shields.io/badge/Loader-Fabric-DBD0B4)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -13,7 +13,7 @@ A lightweight progression/QoL mod that **multiplies block drops** when players b
 ## Links
 
 - **Modrinth:** https://modrinth.com/mod/fast-progress  
-- **CurseForge:** https://legacy.curseforge.com/minecraft/mc-mods/fast-progress  
+- **CurseForge:** https://www.curseforge.com/minecraft/mc-mods/fast-progress
 
 ---
 
@@ -22,7 +22,14 @@ A lightweight progression/QoL mod that **multiplies block drops** when players b
 - **Minecraft 1.20.1**
   - Fabric
   - Forge
+  - NeoForge (same forge .jar)
 - **Minecraft 1.21.1**
+  - Fabric
+  - NeoForge
+- **Minecraft 1.21.10**
+  - Fabric
+  - NeoForge
+- **Minecraft 1.21.11**
   - Fabric
   - NeoForge
 
@@ -64,7 +71,7 @@ When a player breaks a block, Fast Progress:
 
 ## Installation
 
-### Fabric (1.20.1 / 1.21.1)
+### Fabric (1.20.1 / 1.21.1 / 1.21.10 / 1.21.11)
 Place the following in your `mods/` folder:
 - `Fast Progress (Fabric).jar`
 - **Fabric API**
@@ -78,7 +85,7 @@ Place the following in your `mods/` folder:
 - **Architectury API**
 - **Cloth Config (Forge)**
 
-### NeoForge (1.21.1)
+### NeoForge (1.20.1 / 1.21.1 / 1.21.10 / 1.21.11)
 Place the following in your `mods/` folder:
 - `Fast Progress (NeoForge).jar`
 - **Architectury API**
