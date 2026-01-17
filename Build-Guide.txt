@@ -1,0 +1,10 @@
+# ### WARNING ###
+# THIS IS ONLY FOR ME, THE DEV, YOU CAN DOWNLOAD YOUR PREFERED VERSION DIRECTLY FROM CURSFORGE OR MODRINTH, UNLESS YOU WANT TO BUILD IT YOURSELF, IN THAT CASE FEEL FREE TO FOLLOW THIS INSTRUCTIONS.
+#
+# Run in this path:
+# powershell -ExecutionPolicy Bypass -File .\build-all.ps1
+#
+# It would ask for a mod version (not MC version)
+# e.g. : 1.0.1
+# 
+# The building process would start automatically and you can find the .jar inside the builds folder
