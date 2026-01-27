@@ -12,7 +12,7 @@ A lightweight progression/QoL mod that **multiplies block drops** when players b
 
 ## Links
 
-- **Modrinth:** https://modrinth.com/mod/fast-progress  (Mod still "Under review" by moderation)
+- **Modrinth:** https://modrinth.com/mod/fast-progress
 - **CurseForge:** https://www.curseforge.com/minecraft/mc-mods/fast-progress
 
 ---
