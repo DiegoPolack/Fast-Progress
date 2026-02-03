@@ -1,9 +1,11 @@
+# Fast Progress
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20downloads)](https://modrinth.com/mod/fast-progress)
 [![Modrinth Version](https://img.shields.io/modrinth/v/fast-progress?logo=modrinth&logoColor=white&label=Modrinth%20version)](https://modrinth.com/mod/fast-progress)
-[![CurseForge](https://img.shields.io/badge/CurseForge-fast--progress-F16436?logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/fast-progress)
-[![NeoForge](https://img.shields.io/badge/Loader-NeoForge-5BC2E7)](#)
+[![CurseForge](https://img.shields.io/badge/CurseForge-fast--progress-F16436?logo=curseforge&logoColor=white)](https://legacy.curseforge.com/minecraft/mc-mods/fast-progress)
 [![Fabric](https://img.shields.io/badge/Loader-Fabric-DBD0B4)](#)
+[![Forge](https://img.shields.io/badge/Loader-Forge-orange)](#)
+[![NeoForge](https://img.shields.io/badge/Loader-NeoForge-5BC2E7)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A lightweight progression/QoL mod that **multiplies block drops** when players break blocks — fully configurable (multiplier, structure blocks, placed blocks, Fortune/Silk Touch, and per-block filters).
@@ -12,8 +14,8 @@ A lightweight progression/QoL mod that **multiplies block drops** when players b
 
 ## Links
 
-- **Modrinth:** https://modrinth.com/mod/fast-progress
-- **CurseForge:** https://www.curseforge.com/minecraft/mc-mods/fast-progress
+- **Modrinth:** https://modrinth.com/mod/fast-progress  
+- **CurseForge:** https://legacy.curseforge.com/minecraft/mc-mods/fast-progress  
 
 ---
 
@@ -22,7 +24,6 @@ A lightweight progression/QoL mod that **multiplies block drops** when players b
 - **Minecraft 1.20.1**
   - Fabric
   - Forge
-  - NeoForge (same forge .jar)
 - **Minecraft 1.21.1**
   - Fabric
   - NeoForge
@@ -33,7 +34,7 @@ A lightweight progression/QoL mod that **multiplies block drops** when players b
   - Fabric
   - NeoForge
 
-> Make sure you download the correct jar for your Minecraft version and loader.
+> Download the correct file for your **Minecraft version** and **loader**.
 
 ---
 
@@ -54,8 +55,11 @@ A lightweight progression/QoL mod that **multiplies block drops** when players b
 - **Whitelist / Blacklist Filter**  
   Precisely control which blocks are affected (supports block IDs, and optionally tags if enabled in your build).
 
-- **In-Game Config Menu**  
-  Edit the config from the Mods menu (Cloth Config UI).
+- **Server-side Friendly**  
+  The server is authoritative: the mod works when installed on a server, and **vanilla clients can still join**.
+
+- **In-Game Configuration (Optional Client UI)**  
+  If you install the mod on the client (plus Cloth Config), you get an in-game config screen that can edit **server config** (OP-only) via sync.
 
 ---
 
@@ -71,27 +75,53 @@ When a player breaks a block, Fast Progress:
 
 ## Installation
 
-### Fabric (1.20.1 / 1.21.1 / 1.21.10 / 1.21.11)
-Place the following in your `mods/` folder:
-- `Fast Progress (Fabric).jar`
+### Server (recommended)
+Install **Fast Progress** on the server. Edit `config/fastprogress.cfg` on the server, or use the admin commands below.
+
+#### Fabric servers
+Put these in the server `mods/` folder:
+- **Fast Progress (Fabric)**
 - **Fabric API**
 - **Architectury API**
-- **Cloth Config (Fabric)**
-- *(Optional but recommended)* **Mod Menu** (enables the config button in the Mods list)
 
-### Forge (1.20.1)
-Place the following in your `mods/` folder:
-- `Fast Progress (Forge).jar`
+#### Forge servers (1.20.1)
+Put these in the server `mods/` folder:
+- **Fast Progress (Forge)**
 - **Architectury API**
-- **Cloth Config (Forge)**
 
-### NeoForge (1.20.1 / 1.21.1 / 1.21.10 / 1.21.11)
-Place the following in your `mods/` folder:
-- `Fast Progress (NeoForge).jar`
+#### NeoForge servers (1.21.x)
+Put these in the server `mods/` folder:
+- **Fast Progress (NeoForge)**
 - **Architectury API**
-- **Cloth Config (NeoForge)**
 
-> Make sure you’re using the correct jar for your loader (Fabric vs Forge vs NeoForge).
+### Client (optional, for in-game config UI)
+If you want the in-game config screen:
+- install the matching **Fast Progress** jar on the client
+- plus:
+  - **Cloth Config** (matching loader)
+  - *(Fabric only, optional but recommended)* **Mod Menu**
+
+> In multiplayer, the config screen can edit the **server config** only if you are **OP/admin**. Otherwise it will fall back to local-only behavior.
+
+---
+
+## Admin Commands (Server-side)
+
+These commands work server-side (useful even for vanilla clients). OP/admin required.
+
+- `/fastprogress show`
+- `/fastprogress reload`
+- `/fastprogress multiplier <1..64>`
+- `/fastprogress affectStructureBlocks <true|false>`
+- `/fastprogress affectPlacedBlocks <true|false>`
+- `/fastprogress affectFortuneDrops <true|false>`
+- `/fastprogress affectSilkTouchDrops <true|false>`
+- `/fastprogress filter <blacklist|whitelist>`
+- `/fastprogress block add <minecraft:block_id>`
+- `/fastprogress block remove <minecraft:block_id>`
+- `/fastprogress block list`
+
+Alias: `/fp`
 
 ---
 
@@ -127,3 +157,28 @@ Blocks:
 # One block id per line
 # minecraft:diamond_ore
 # minecraft:ancient_debris
+```
+
+### Filter Rules
+- **Blacklist (0):** blocks listed are **NOT affected**.
+- **Whitelist (1):** **ONLY** blocks listed are affected. If the list is empty, nothing is affected.
+
+---
+
+## Building from Source
+
+### Requirements
+- **Java 17** for the 1.20.1 project
+- **Java 21** for the 1.21.x projects
+- Gradle (wrapper included)
+
+### Build
+```bash
+./gradlew build
+```
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See [`LICENSE`](LICENSE).
