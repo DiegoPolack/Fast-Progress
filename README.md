@@ -173,11 +173,8 @@ Blocks:
 - Gradle (wrapper included)
 
 ### Build
-```bash
-./gradlew build
-```
 
----
+See [`Build-Guide.txt`](Build Guide).
 
 ## License
 
