@@ -174,7 +174,7 @@ Blocks:
 
 ### Build
 
-See [`Build-Guide.txt`](Build Guide).
+See [`Build-Guide`](Build-Guide.txt).
 
 ## License
 
