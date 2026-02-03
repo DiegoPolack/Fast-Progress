@@ -9,6 +9,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
 @Mod(FastProgressCommon.MOD_ID)
@@ -16,6 +17,7 @@ public class FastProgressNeoForge {
     public FastProgressNeoForge(IEventBus modEventBus, ModContainer modContainer) {
         FastProgressCommon.init();
         NeoForge.EVENT_BUS.addListener(this::onBlockBreak);
+        NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
         if (FMLEnvironment.getDist() == Dist.CLIENT) {
             FastProgressNeoForgeClient.init(modContainer);
         }
@@ -29,5 +31,9 @@ public class FastProgressNeoForge {
             return;
         }
         FastProgressCommon.onBlockBroken(player, level, event.getPos(), event.getState(), level.getBlockEntity(event.getPos()));
+    }
+
+    private void onRegisterCommands(RegisterCommandsEvent event) {
+        com.fastprogress.FastProgressCommands.register(event.getDispatcher());
     }
 }

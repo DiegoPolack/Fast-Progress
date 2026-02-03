@@ -22,6 +22,7 @@ public final class FastProgressCommon {
 
     public static void init() {
         FastProgressConfig.load();
+        FastProgressNetworking.init();
     }
 
     public static void onBlockBroken(ServerPlayer player, ServerLevel level, BlockPos pos, BlockState state, BlockEntity blockEntity) {
