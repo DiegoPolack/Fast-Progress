@@ -1,12 +1,14 @@
 package com.fastprogress.forge;
 
 import com.fastprogress.FastProgressCommon;
+import com.fastprogress.FastProgressCommands;
 import dev.architectury.platform.forge.EventBuses;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -17,6 +19,7 @@ public class FastProgressForge {
         EventBuses.registerModEventBus(FastProgressCommon.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
         FastProgressCommon.init();
         MinecraftForge.EVENT_BUS.addListener(this::onBlockBreak);
+        MinecraftForge.EVENT_BUS.addListener(this::onRegisterCommands);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> FastProgressForgeClient::init);
     }
 
@@ -28,5 +31,9 @@ public class FastProgressForge {
             return;
         }
         FastProgressCommon.onBlockBroken(player, level, event.getPos(), event.getState(), level.getBlockEntity(event.getPos()));
+    }
+
+    private void onRegisterCommands(RegisterCommandsEvent event) {
+        FastProgressCommands.register(event.getDispatcher());
     }
 }
